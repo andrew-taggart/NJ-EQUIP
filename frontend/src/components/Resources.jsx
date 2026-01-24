@@ -165,10 +165,34 @@ function Resources() {
                 <summary><h3>How do I calculate my energy burden using this tool?</h3></summary>
                 <ul className="link-list">
                     <li>
-                        Go to “Calculate Energy Burden” and enter your annual household income, primary heating
-                        fuel, and ZIP code or county. The tool calculates your energy burden and shows how it
-                        compares to state and local averages.
+                        Go to “Calculate Energy Burden” and enter your ZIP code or county. The tool calculates your estimated energy burden and shows how it compares to state and local averages. To calculate your personalized energy burden, please use the following formula and enter the data.
+                        <div style={{ marginTop: "8px", fontStyle: "italic" }}>
+                            Energy Burden (%) =
+                            <span>
+                                {" "}
+                                [ [ (E<sub>e</sub> + R<sub>e</sub>) + (E<sub>h</sub> × R<sub>h</sub>) ] ÷ M<sub>i</sub> ] × 100%
+                            </span>
+                        </div>
                     </li>
+                    <li>E<sub>e</sub> = annual household electricityconsumption (kWh)</li>
+                    <li>R<sub>e</sub> = is electricity rate ($/kWh)</li>
+                    <li>E<sub>h</sub> = annual
+                        heating (therm/BTU)</li>
+                    <li>R<sub>h</sub> = heating rate ($/therm)</li>
+                    <li>M<sub>i</sub> = median household income.</li>
+                    <li>
+                        <strong>Example:</strong>{" "}
+                        If a household uses 7,200 kWh of electricity at $0.18/kWh
+                        (E<sub>e</sub> × R<sub>e</sub> = $1,296),
+                        and 900 therms of heating at $1.25/therm
+                        (E<sub>h</sub> × R<sub>h</sub> = $1,125),
+                        with a median household income of $50,000,
+                        then Energy Burden =
+                        {" "}
+                        [ ($1,296 + $1,125) ÷ $50,000 ] × 100
+                        = <strong>4.8%</strong>.
+                    </li>
+
                 </ul>
             </details>
 
@@ -185,54 +209,54 @@ function Resources() {
             <details className="faq-item">
                 <summary><h3>Where does the data come from?</h3></summary>
                 <ul className="link-list">
-                <li>
-                    Sources include the U.S. Census Bureau (ACS &amp; Decennial Census), NJ Clean Energy
-                    Program (NJCEP), New Jersey Board of Public Utilities (NJBPU), publicly available Reddit
-                    posts (for sentiment analysis), and NJGIN for mapping boundaries.
-                </li>
+                    <li>
+                        Sources include the U.S. Census Bureau (ACS &amp; Decennial Census), NJ Clean Energy
+                        Program (NJCEP), New Jersey Board of Public Utilities (NJBPU), publicly available Reddit
+                        posts (for sentiment analysis), and NJGIN for mapping boundaries.
+                    </li>
                 </ul>
             </details>
 
             <details className="faq-item">
                 <summary><h3>What is an overburdened community?</h3></summary>
                 <ul className="link-list">
-                <li>
-                    As defined by NJDEP, an overburdened community meets criteria based on income, race/ethnicity,
-                    and English proficiency. These communities often face greater environmental and health risks
-                    and are prioritized under New Jersey’s environmental justice policies.
-                </li>
+                    <li>
+                        As defined by NJDEP, an overburdened community meets criteria based on income, race/ethnicity,
+                        and English proficiency. These communities often face greater environmental and health risks
+                        and are prioritized under New Jersey’s environmental justice policies.
+                    </li>
                 </ul>
             </details>
 
             <details className="faq-item">
                 <summary><h3>How does NJ EQUIP measure public opinion on energy policy?</h3></summary>
                 <ul className="link-list">
-                <li>
-                    We apply sentiment analysis (e.g., VADER, ClimateBERT) to Reddit comments to identify
-                    positive, neutral, or negative sentiment over time, helping visualize reactions to policies
-                    like rebates or clean-energy programs.
-                </li>
+                    <li>
+                        We apply sentiment analysis (e.g., VADER, ClimateBERT) to Reddit comments to identify
+                        positive, neutral, or negative sentiment over time, helping visualize reactions to policies
+                        like rebates or clean-energy programs.
+                    </li>
                 </ul>
             </details>
 
             <details className="faq-item">
                 <summary><h3>Can I download or export the data?</h3></summary>
                 <ul className="link-list">
-                <li>
-                    Visualizations are available for public use. Export/download features may be added in future
-                    versions to support research and community advocacy.
-                </li>
+                    <li>
+                        Visualizations are available for public use. Export/download features may be added in future
+                        versions to support research and community advocacy.
+                    </li>
                 </ul>
             </details>
 
             <details className="faq-item">
                 <summary><h3>Who should use NJ EQUIP?</h3></summary>
                 <ul className="link-list">
-                <li>
-                    Residents seeking to understand energy costs; community organizations advocating for energy
-                    justice; researchers studying demographic/spatial patterns; and policymakers/planners working
-                    on equitable clean-energy programs.
-                </li>
+                    <li>
+                        Residents seeking to understand energy costs; community organizations advocating for energy
+                        justice; researchers studying demographic/spatial patterns; and policymakers/planners working
+                        on equitable clean-energy programs.
+                    </li>
                 </ul>
             </details>
         </div>
